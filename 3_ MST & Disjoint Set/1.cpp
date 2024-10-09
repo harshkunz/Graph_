@@ -2,6 +2,7 @@
 class DisjointSet {
     vector<int> rank, size, parent;
 public:
+    // constructor
     DisjointSet(int n){
         rank.resize(n+1, 0);
         parent.resize(n+1);
@@ -50,5 +51,9 @@ public:
             parent[ulp_u] = ulp_v;
             size[ulp_v] += size[ulp_u];
         }
+    }
+
+    int getSize(int u){
+        return size[u];
     }
 };
