@@ -6,7 +6,6 @@ vector <int> dijkstra(int N, vector<vector<int>> adj[], int S)
         vector<int> dis(N, 1e9);
         dis[S] = 0;
         
-        
         while(!pq.empty()){
             int u = pq.top().first;
             int dist = pq.top().second;
